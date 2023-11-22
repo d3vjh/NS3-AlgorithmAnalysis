@@ -6,5 +6,5 @@
 
   "remoteUser": "codespace",
   "overrideCommand": false ,
- "postCreateCommand": "echo 'Espacio creado Correctamente"
+  "postCreateCommand": "echo 'Espacio creado Correctamente'"
 }

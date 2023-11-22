@@ -1,0 +1,13 @@
+exec_prefix="/usr/local/bin"
+libdir="/usr/local/lib"
+includedir="/usr/local/include"
+
+Name: ns3-traffic-control
+Description: 
+URL: 
+Version: 3.40
+Requires:  ns3-network ns3-core
+Requires.private: 
+Cflags: -I"${includedir}"  -I/usr/include -I/usr -I/usr/include/libxml2 -I/usr/include/python3.8
+Libs: -L"${libdir}" -lns3.40-traffic-control-debug  -lns3.40-network-debug -lns3.40-core-debug -lpthread
+Libs.private: -L"${libdir}" 

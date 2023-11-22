@@ -1,0 +1,209 @@
+Performing C++ SOURCE FILE Test MISSING_OSTREAM_NULLPTR_OPERATOR failed with the following output:
+Change Dir: /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0b26c/fast && /usr/bin/make -f CMakeFiles/cmTC_0b26c.dir/build.make CMakeFiles/cmTC_0b26c.dir/build
+make[1]: Entering directory '/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0b26c.dir/src.cxx.o
+/usr/bin/c++    -DMISSING_OSTREAM_NULLPTR_OPERATOR -fPIE   -std=c++17 -o CMakeFiles/cmTC_0b26c.dir/src.cxx.o -c /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx
+/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx:11:12: error: ambiguous overload for ‘operator<<’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘std::nullptr_t’)
+   11 |         os << std::nullptr_t();
+      |         ~~~^~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/9/iostream:39,
+                 from /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx:2:
+/usr/include/c++/9/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:117:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:127:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  127 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:245:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  245 |       operator<<(const void* __p)
+      |       ^~~~~~~~
+/usr/include/c++/9/ostream:250:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::nullptr_t) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t]’
+  250 |       operator<<(nullptr_t)
+      |       ^~~~~~~~
+In file included from /usr/include/c++/9/ostream:702,
+                 from /usr/include/c++/9/iostream:39,
+                 from /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx:2:
+/usr/include/c++/9/bits/ostream.tcc:119:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]’
+  119 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx:4:26: note: candidate: ‘std::ostream& operator<<(std::ostream&, std::nullptr_t)’
+    4 |     inline std::ostream& operator << (std::ostream& os, std::nullptr_t ptr)
+      |                          ^~~~~~~~
+In file included from /usr/include/c++/9/ostream:702,
+                 from /usr/include/c++/9/iostream:39,
+                 from /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx:2:
+/usr/include/c++/9/bits/ostream.tcc:321:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*) [with _CharT = char; _Traits = std::char_traits<char>]’
+  321 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+In file included from /usr/include/c++/9/iostream:39,
+                 from /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx:2:
+/usr/include/c++/9/ostream:565:5: note: candidate: ‘std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*) [with _Traits = std::char_traits<char>]’
+  565 |     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:578:5: note: candidate: ‘std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*) [with _Traits = std::char_traits<char>]’
+  578 |     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     ^~~~~~~~
+/usr/include/c++/9/ostream:583:5: note: candidate: ‘std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*) [with _Traits = std::char_traits<char>]’
+  583 |     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     ^~~~~~~~
+make[1]: *** [CMakeFiles/cmTC_0b26c.dir/build.make:66: CMakeFiles/cmTC_0b26c.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_0b26c/fast] Error 2
+
+
+Source file was:
+
+    #include <iostream>
+    #include <cstddef>
+    inline std::ostream& operator << (std::ostream& os, std::nullptr_t ptr)
+    {
+      return os << "nullptr"; //whatever you want nullptr to show up as in the console
+    }
+    int main()
+    {
+        std::ostream os(NULL);
+        os << std::nullptr_t();
+        return 0;
+    }
+    
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_797d2/fast && /usr/bin/make -f CMakeFiles/cmTC_797d2.dir/build.make CMakeFiles/cmTC_797d2.dir/build
+make[1]: Entering directory '/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_797d2.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -fPIE   -o CMakeFiles/cmTC_797d2.dir/src.c.o   -c /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_797d2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_797d2.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_797d2.dir/src.c.o  -o cmTC_797d2 
+/usr/bin/ld: CMakeFiles/cmTC_797d2.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_797d2.dir/build.make:87: cmTC_797d2] Error 1
+make[1]: Leaving directory '/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_797d2/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5ce6f/fast && /usr/bin/make -f CMakeFiles/cmTC_5ce6f.dir/build.make CMakeFiles/cmTC_5ce6f.dir/build
+make[1]: Entering directory '/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5ce6f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -fPIE   -o CMakeFiles/cmTC_5ce6f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5ce6f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ce6f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5ce6f.dir/CheckFunctionExists.c.o  -o cmTC_5ce6f  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5ce6f.dir/build.make:87: cmTC_5ce6f] Error 1
+make[1]: Leaving directory '/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_5ce6f/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test HAVE_UINT128_T failed with the following output:
+Change Dir: /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bbecc/fast && /usr/bin/make -f CMakeFiles/cmTC_bbecc.dir/build.make CMakeFiles/cmTC_bbecc.dir/build
+make[1]: Entering directory '/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bbecc.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_UINT128_T -fPIE   -std=c++17 -o CMakeFiles/cmTC_bbecc.dir/src.cxx.o -c /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx
+/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx:4:18: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint32_t’?
+    4 |             if ((uint128_t *) 0) return 0;
+      |                  ^~~~~~~~~
+      |                  uint32_t
+/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx:4:29: error: expected primary-expression before ‘)’ token
+    4 |             if ((uint128_t *) 0) return 0;
+      |                             ^
+/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx:4:30: error: expected ‘)’ before numeric constant
+    4 |             if ((uint128_t *) 0) return 0;
+      |                ~             ^~
+      |                              )
+/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/src.cxx:5:25: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint32_t’?
+    5 |             if (sizeof (uint128_t)) return 0;
+      |                         ^~~~~~~~~
+      |                         uint32_t
+make[1]: *** [CMakeFiles/cmTC_bbecc.dir/build.make:66: CMakeFiles/cmTC_bbecc.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_bbecc/fast] Error 2
+
+
+Source file was:
+#include <stdint.h>
+       int main()
+         {
+            if ((uint128_t *) 0) return 0;
+            if (sizeof (uint128_t)) return 0;
+            return 1;
+         }
+Determining if files boost/units/quantity.hpp;boost/units/systems/si.hpp exist failed with the following output:
+Change Dir: /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e3a5b/fast && /usr/bin/make -f CMakeFiles/cmTC_e3a5b.dir/build.make CMakeFiles/cmTC_e3a5b.dir/build
+make[1]: Entering directory '/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e3a5b.dir/HAVE_BOOST_UNITS.cpp.o
+/usr/bin/c++    -fPIE   -std=c++17 -o CMakeFiles/cmTC_e3a5b.dir/HAVE_BOOST_UNITS.cpp.o -c /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CheckIncludeFiles/HAVE_BOOST_UNITS.cpp
+/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CheckIncludeFiles/HAVE_BOOST_UNITS.cpp:2:10: fatal error: boost/units/quantity.hpp: No such file or directory
+    2 | #include <boost/units/quantity.hpp>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_e3a5b.dir/build.make:66: CMakeFiles/cmTC_e3a5b.dir/HAVE_BOOST_UNITS.cpp.o] Error 1
+make[1]: Leaving directory '/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e3a5b/fast] Error 2
+
+
+Source:
+/* */
+#include <boost/units/quantity.hpp>
+#include <boost/units/systems/si.hpp>
+
+
+int main(void){return 0;}
+
+Determining if the include file net/netmap_user.h exists failed with the following output:
+Change Dir: /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_15835/fast && /usr/bin/make -f CMakeFiles/cmTC_15835.dir/build.make CMakeFiles/cmTC_15835.dir/build
+make[1]: Entering directory '/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_15835.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fPIE   -o CMakeFiles/cmTC_15835.dir/CheckIncludeFile.c.o   -c /workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: net/netmap_user.h: No such file or directory
+    1 | #include <net/netmap_user.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_15835.dir/build.make:66: CMakeFiles/cmTC_15835.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/cmake-cache/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_15835/fast] Error 2
+
+
+
