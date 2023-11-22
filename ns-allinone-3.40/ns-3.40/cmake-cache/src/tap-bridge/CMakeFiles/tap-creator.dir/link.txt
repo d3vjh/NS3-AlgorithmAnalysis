@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/tap-creator.dir/model/tap-creator.cc.o CMakeFiles/tap-creator.dir/model/tap-encode-decode.cc.o  -o ../../../build/src/tap-bridge/ns3.40-tap-creator-debug   -L/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/build/lib  -Wl,-rpath,/workspaces/NS3-AlgorithmAnalysis/ns-allinone-3.40/ns-3.40/build/lib: -Wl,--no-as-needed -Wl,--as-needed 
