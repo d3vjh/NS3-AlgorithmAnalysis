@@ -1,0 +1,10 @@
+{
+  // Name this configuration
+  "name": "NS3 Algorithms Analysis",
+  // Use the base codespace image
+  "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
+
+  "remoteUser": "codespace",
+  "overrideCommand": false ,
+ "postCreateCommand": "echo 'Espacio creado Correctamente"
+}
